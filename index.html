@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/b824f1f94d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <img id="celebrate" src=""/>
+    <div class="uppersection">
+        <div class="menu-container">
+            <span class="material-icons" id="menuel" style="font-size:35px;">menu</span>
+            <div class="menu" id="menulist">
+                <p><span class="material-icons" style="font-size:20px;font-weight:bold">check_circle_outline</span> LEVEL</p>
+                <div id="level">
+                    <a class="level">Easy<span id="level1" class="material-icons" style="font-size:20px;font-weight:bold;display:none" >done</span></a>
+                    <a class="level">Medium<span id="level2" class="material-icons" style="font-size:20px;font-weight:bold">done</span></a>
+                    <a class="level">Hard<span id="level3" class="material-icons" style="font-size:20px;font-weight:bold;display:none">done</span></a>
+                </div>
+                <p><span class="material-icons" style="font-size:20px;">rocket_launch</span> THEME</p>
+                <div id="theme">
+                    <a class="theme">Pokemons<span id="theme1" class="material-icons" style="font-size:20px;font-weight:bold;display:none">done</span></a>
+                    <a class="theme">Superheroes<span id="theme2" class="material-icons" style="font-size:20px;font-weight:bold;display:none">done</span></a>
+                    <a class="theme">Actress<span id="theme3" class="material-icons" style="font-size:20px;font-weight:bold;">done</span></a>
+                </div>
+                <p id="newgamemenu"><span class="material-icons"style="font-size:20px;">sports_esports</span> NEW GAME</p>
+            </div>
+        </div>
+        <div class="gamezone">
+            <h1 id="title" class="animate__animated animate__tada">MEMORY CARD GAME</h1>
+            <div class="lives animate__animated animate__heartBeat" id="attemptel"></div>
+        </div>
+    </div>
+    <div class="gamezone lowersection">
+        <section id ="gameel" class="memory-card-game">
+            <div class="loader" id="loaderEl"></div>
+            <div class="card" data-framework="1">
+                <img class="front" alt="unknown_card"/>
+                <img class="back"  alt="unknown_card"/>
+            </div>
+            <div class="card" data-framework="2">
+                <img class="front" alt="unknown_card"/>
+                <img class="back"  alt="unknown_card"/>
+            </div>
+            <div class="card" data-framework="3">
+                <img class="front"  alt="unknown_card"/>
+                <img class="back"  alt="unknown_card"/>
+            </div>
+            <div class="card" data-framework="4">
+                <img class="front" alt="unknown_card"/>
+                <img class="back"  alt="unknown_card"/>
+            </div>
+            <div class="card" data-framework="5">
+                <img class="front"  alt="unknown_card"/>
+                <img class="back"  alt="unknown_card"/>
+            </div>
+            <div class="card" data-framework="6">
+                <img class="front"  alt="unknown_card"/>
+                <img class="back"  alt="unknown_card"/>
+            </div>
+            <div class="card" data-framework="6">
+                <img class="front"  alt="unknown_card"/>
+                <img class="back" alt="unknown_card"/>
+            </div>
+            <div class="card" data-framework="5">
+                <img class="front"  alt="unknown_card"/>
+                <img class="back"  alt="unknown_card"/>
+            </div>
+            <div class="card" data-framework="4">
+                <img class="front"  alt="unknown_card"/>
+                <img class="back" alt="unknown_card"/>
+            </div>
+            <div class="card" data-framework="3">
+                <img class="front"  alt="unknown_card"/>
+                <img class="back"  alt="unknown_card"/>
+            </div>
+            <div class="card" data-framework="2">
+                <img class="front"  alt="unknown_card"/>
+                <img class="back"  alt="unknown_card"/>
+            </div>
+            <div class="card" data-framework="1">
+                <img class="front" alt="unknown_card"/>
+                <img class="back" alt="unknown_card"/>
+            </div>
+        </section>
+    </div>
+    <div class="message">
+        <img id="msgimg" src=""/>
+        <button id="newgamebtn" class="animate__animated animate__tada">NEW GAME</button>
+    </div>
+</body>
+</html>

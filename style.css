@@ -1,0 +1,194 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Calibri, 'Trebuchet MS', Helvetica, sans-serif;
+    background-color:rgba(143, 188, 235, 1);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1008%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c265 C 57.6%2c225.2 172.8%2c81.4 288%2c66 C 403.2%2c50.6 460.8%2c174.8 576%2c188 C 691.2%2c201.2 748.8%2c136.2 864%2c132 C 979.2%2c127.8 1036.8%2c187.4 1152%2c167 C 1267.2%2c146.6 1382.4%2c57.4 1440%2c30L1440 560L0 560z' fill='rgba(105%2c 164%2c 227%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c454 C 57.6%2c435.8 172.8%2c342.8 288%2c363 C 403.2%2c383.2 460.8%2c569 576%2c555 C 691.2%2c541 748.8%2c314.2 864%2c293 C 979.2%2c271.8 1036.8%2c427.4 1152%2c449 C 1267.2%2c470.6 1382.4%2c410.6 1440%2c401L1440 560L0 560z' fill='rgba(143%2c 188%2c 235%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1008'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#celebrate{
+    display:none;
+    position: absolute;
+    width:100vw;
+    height:100vh;
+}
+.uppersection{
+    display:flex;
+}
+.gamezone {
+    display:flex;
+    margin:auto;
+    flex-direction: column;
+}
+.lowersection{
+    height:82vh;
+    position:relative;
+}
+.loader {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    z-index:1;
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+#menuel{
+    cursor: pointer;
+    position:fixed;
+    z-index: 2;
+    display: flex;
+    color:rgb(2, 73, 105);
+}
+.menu{
+    position:absolute;
+    top:0px;
+    transform:translate(-200%); 
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    z-index: 1;
+    max-width:300px;
+    width:40%;
+    height:100%; 
+    background-color:rgba(143, 188, 235,.9);
+    border-radius: 5PX;
+    font-size: 1.5em;
+    font-weight: bold;
+    color:rgb(4, 93, 134);
+    overflow: hidden;
+}
+.menu div{
+    margin-bottom:1em;
+    margin-left: 2em;
+    cursor: pointer;
+    display:flex;
+    flex-direction: column;
+}
+.menu p{
+    margin-bottom:0.2em;
+    margin-left: .85em;
+    cursor: pointer;
+}
+.lives{
+    margin:.1em auto .1em;
+    color:rgb(199, 30, 30);
+    font-size:1.8em;
+    font-weight: bold;
+    text-align: center;
+}
+.lives i{
+    margin:3px;
+}
+.lives p{
+    color:rgb(2, 73, 105);
+}
+#title{
+    color:rgb(2, 73, 105);
+}
+.memory-card-game{
+    max-width:100vw;
+    position: relative;
+    width:550px;
+    height:100%; 
+    margin:auto;
+    display:flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+.card{
+    cursor: pointer;
+    width:calc(25% - 10px);
+    height:calc(33.333% - 10px);
+    position: relative;
+    margin:5px;
+    transform:scale(1);
+    transform-style:preserve-3d;
+    transition:transform .5s;
+}
+.card:active
+{
+    transform:scale(.97);
+    transition:0.2s;
+}
+.card.flip{
+    transform:rotateY(180deg); 
+}
+.front,.back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    padding:8px;
+    border-radius:5px;
+    background-color:rgb(193, 254, 253);
+    backface-visibility:hidden;
+}
+.front{
+    transform:rotateY(180deg);   
+}
+.message{
+    color:rgb(43, 135, 177);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size:1.4em;
+    font-weight:bold;
+    display:flex;
+    flex-direction: column;
+    margin-top: 35px;
+    align-items: center;
+}
+.message button{
+    display:none;
+    padding:10px;
+    font-size:.6em;
+    font-weight:bold;
+    color:rgb(43, 135, 177);
+    background-color:white;
+    border:solid 3px rgb(43, 135, 177);
+    margin:35px;
+    border-radius:7px;
+}
+.message button:active{
+    background-color:rgb(180, 185, 185);
+}
+@keyframes heartattack {
+    100%{
+        transform-origin: 50% -200%;
+        transform:scale(0) rotate(12turn);
+    }
+}
+@media only screen and (max-width:450px)
+{
+    .card{
+        width:calc(33.333% - 10px);
+        height:calc(25% - 10px);
+    }
+    .menu{
+        font-size:1.4em;
+        min-width: 60vw;
+    }
+    .menu div{
+        margin-left:1.9em;
+    }
+    #title{
+        font-size:1.5em;
+    }
+}
